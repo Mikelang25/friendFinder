@@ -3,7 +3,7 @@
 var friends = [
     {
         name: "Adam Sandler",
-        image: "adam@example.com",
+        image: "/images/sandler.png",
         scores: [
             2,
             3,
@@ -19,7 +19,7 @@ var friends = [
     },
     {
         name: "Dave Chapelle",
-        image: "adam@example.com",
+        image: "/images/chappelle.jpg",
         scores: [
             4,
             2,

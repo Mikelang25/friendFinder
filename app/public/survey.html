@@ -9,10 +9,13 @@
 
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-    <script src="https://code.jquery.com/jquery-3.4.1.min.js" integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script src="https://code.jquery.com/jquery-3.4.1.min.js"
+        integrity="sha256-CSXorXvZcTkaix6Yvo6HppcZGetbYMGWSFlBw8HfCJo=" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+        integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+        crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
-    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/fc7e5aa30b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="reset.css" />
     <link rel="stylesheet" type="text/css" href="style.css" />
@@ -78,7 +81,8 @@
             <div class="row">
                 <div class="col-md-12">
                     <h2 class="lbl-ques">Question 3</h2>
-                    <p class="question">You find is easy to stay relaxed and focused even when there is some pressure.</p>
+                    <p class="question">You find is easy to stay relaxed and focused even when there is some pressure.
+                    </p>
                     <br>
                     <select id="Q3">
                         <option value="" selected class="default-opt">Select an Option</option>
@@ -168,7 +172,8 @@
             <div class="row">
                 <div class="col-md-12">
                     <h2 class="lbl-ques">Question 9</h2>
-                    <p class="question">You think that everyone's views should be respected regardless of whether they are supported by facts or not.</p>
+                    <p class="question">You think that everyone's views should be respected regardless of whether they
+                        are supported by facts or not.</p>
                     <br>
                     <select id="Q9">
                         <option value="" selected class="default-opt">Select an Option</option>
@@ -197,31 +202,38 @@
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <button type="button" id="btn-submit" class="btn btn-danger"><i class="far fa-thumbs-up"></i>Submit</button>
+                    <button type="button" id="btn-submit" class="btn btn-danger"><i
+                            class="far fa-thumbs-up"></i>Submit</button>
                     <hr>
                 </div>
             </div>
         </div>
         <div class="col-md-3"></div>
     </div>
-    <div class="modal fade" id="matchModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered" role="document">
-          <div class="modal-content">
-            <div class="modal-header">
-              <h5 class="modal-title" id="exampleModalCenterTitle">Modal title</h5>
-              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-              </button>
+
+    <div class="modal fade" id="matchModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+        aria-hidden="true">
+        <div class="row">
+            <div class="col-md-12 text-center">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalCenterTitle">Your Match</h5>
+                            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
+                        </div>
+                        <div id="match-info" class="modal-body">
+
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" id="btn-close" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                        </div>
+                    </div>
+                </div>
             </div>
-            <div class="modal-body">
-                hello!!!!
-            </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-            </div>
-          </div>
         </div>
-      </div>
+    </div>
 
 </body>
 
@@ -229,34 +241,35 @@
 
 <script>
 
-$("#btn-submit").on("click", function(event) {
-    event.preventDefault();
-    var newSurvey = {
-        "name": $("#name").val().trim(),
-        "photo": $("#photo").val().trim(),
-        "scores":[
-            $("#Q1").val(),
-            $("#Q2").val(),
-            $("#Q3").val(),
-            $("#Q4").val(),
-            $("#Q5").val(),
-            $("#Q6").val(),
-            $("#Q7").val(),
-            $("#Q8").val(),
-            $("#Q9").val(),
-            $("#Q10").val()
-        ] 
-    };
+    $("#btn-submit").on("click", function (event) {
+        event.preventDefault();
+        var newSurvey = {
+            "name": $("#name").val().trim(),
+            "photo": $("#photo").val().trim(),
+            "scores": [
+                $("#Q1").val(),
+                $("#Q2").val(),
+                $("#Q3").val(),
+                $("#Q4").val(),
+                $("#Q5").val(),
+                $("#Q6").val(),
+                $("#Q7").val(),
+                $("#Q8").val(),
+                $("#Q9").val(),
+                $("#Q10").val()
+            ]
+        };
 
-    console.log(newSurvey);
-
-    $.post("/api/survey", newSurvey,
-      function(data) {
-        console.log(data.name);
-        console.log(data.image);
-        $("#matchModal").modal("toggle")
-        }); 
-  });
-
+        $.post("/api/survey", newSurvey,
+            function (data) {
+                var closeMatch = $("<div>");
+                var matchPhoto = $("<img>").attr("src", data.image);
+                var matchName = $("<p>").text(data.name);
+                matchName.addClass("matchName")
+                closeMatch.append(matchPhoto, matchName);
+                $("#match-info").append(closeMatch);
+                $("#matchModal").modal("toggle")
+            });
+    });
 
 </script>

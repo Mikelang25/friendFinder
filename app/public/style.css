@@ -94,6 +94,25 @@ body{
     margin-right:4px;
 }
 
+.matchName{
+    margin-top:10px;
+    font-size:20pt;
+    font-weight: bold;
+}
+
+#exampleModalCenterTitle{
+    font-weight: bold;
+    text-align: center;
+    width: 100%;
+    font-size: 20pt;
+}
+
+#btn-close{
+    width:100%;
+    border: 0.5pt solid black;
+    font-weight: bold;
+}
+
 select{
     border-radius: 5px;
 }
