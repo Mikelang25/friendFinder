@@ -1,4 +1,6 @@
-
+body{
+    background-color: grey;
+}
 
 .main-head{
     height: 400px;
@@ -61,6 +63,7 @@
 .col-md-6{
     border-left:2pt solid black;
     border-right:2pt solid black;
+    background-color: whitesmoke;
 }
 
 .default-opt{
@@ -80,10 +83,15 @@
 }
 
 .btn-danger{
-    margin-top:15px;
+    margin-top:30px;
     width:100%;
     font-size:15pt;
     font-weight: bold;
+    border: 0.5pt solid black;
+}
+
+.fa-thumbs-up{
+    margin-right:4px;
 }
 
 select{

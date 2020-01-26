@@ -10,6 +10,7 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
         integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://kit.fontawesome.com/fc7e5aa30b.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" type="text/css" href="reset.css" />
     <link rel="stylesheet" type="text/css" href="style.css" />
@@ -31,9 +32,9 @@
             <form>
                 <h2 class="lbl-about">About You</h2>
                 Name (Required): <br>
-                <input class="about" type="text" name="name" required><br>
+                <input id="name" class="about" type="text" name="name" required><br>
                 Link to Photo (Required): <br>
-                <input class="about" type="text" name="photo" required><br>
+                <input id="photo" class="about" type="text" name="photo" required><br>
             </form>
             <hr class="breaks">
         </div>
@@ -194,7 +195,7 @@
             </div>
             <div class="row">
                 <div class="col-md-12">
-                    <button type="button" id="btn-submit" class="btn btn-danger">Submit</button>
+                    <button type="button" id="btn-submit" class="btn btn-danger"><i class="far fa-thumbs-up"></i>Submit</button>
                     <hr>
                 </div>
             </div>
@@ -204,3 +205,38 @@
 </body>
 
 </html>
+
+<script>
+
+$("#btn-submit").on("click", function(event) {
+    event.preventDefault();
+
+    // Here we grab the form elements
+    var newSurvey = {
+        "name": $("#name").val().trim(),
+        "photo": $("#photo").val().trim(),
+        "scores":[
+            $("#Q1").val(),
+            $("#Q2").val(),
+            $("#Q3").val(),
+            $("#Q4").val(),
+            $("#Q5").val(),
+            $("#Q6").val(),
+            $("#Q7").val(),
+            $("#Q8").val(),
+            $("#Q9").val(),
+            $("#Q10").val()
+        ] 
+    };
+
+    console.log(newSurvey);
+
+    $.post("/api/survey", newSurvey,
+      function(data) {
+            console.log(data.name);
+            console.log(data.image);
+      });
+  });
+
+
+</script>
