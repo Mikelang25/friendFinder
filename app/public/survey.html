@@ -1,12 +1,206 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+        integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/fc7e5aa30b.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" type="text/css" href="reset.css" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+
 </head>
+
 <body>
-    <div>TEST</div>
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <h1 class="lbl-survey">Survey Questions</h1>
+            <hr class="breaks">
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6 about-you">
+            <form>
+                <h2 class="lbl-about">About You</h2>
+                Name (Required): <br>
+                <input class="about" type="text" name="name" required><br>
+                Link to Photo (Required): <br>
+                <input class="about" type="text" name="photo" required><br>
+            </form>
+            <hr class="breaks">
+        </div>
+        <div class="col-md-3"></div>
+    </div>
+    <div class="row">
+        <div class="col-md-3"></div>
+        <div class="col-md-6">
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="lbl-ques">Question 1</h2>
+                    <p class="question">Your mind is always buzzing with unexplored ideas and plans.</p>
+                    <br>
+                    <select id="Q1">
+                        <option value="" selected class="default-opt">Select an Option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="lbl-ques">Question 2</h2>
+                    <p class="question">Generally speaking, you rely more on your experience than your imaginaton.</p>
+                    <br>
+                    <select id="Q2">
+                        <option value="" selected class="default-opt">Select an Option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="lbl-ques">Question 3</h2>
+                    <p class="question">You find is easy to stay relaxed and focused even when there is some pressure.</p>
+                    <br>
+                    <select id="Q3">
+                        <option value="" selected class="default-opt">Select an Option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="lbl-ques">Question 4</h2>
+                    <p class="question">You rarely do something just out of sheer curiosity.</p>
+                    <br>
+                    <select id="Q4">
+                        <option value="" selected class="default-opt">Select an Option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="lbl-ques">Question 5</h2>
+                    <p class="question">People can rarely upset you.</p>
+                    <br>
+                    <select id="Q5">
+                        <option value="" selected class="default-opt">Select an Option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="lbl-ques">Question 6</h2>
+                    <p class="question">It is often difficult for you to relate to other people's feelings.</p>
+                    <br>
+                    <select id="Q6">
+                        <option value="" selected class="default-opt">Select an Option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="lbl-ques">Question 7</h2>
+                    <p class="question">In a discussion, truth should be more important than people's sensitivities.</p>
+                    <br>
+                    <select id="Q7">
+                        <option value="" selected class="default-opt">Select an Option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="lbl-ques">Question 8</h2>
+                    <p class="question">You rarely get carried away by fantasies and ideas.</p>
+                    <br>
+                    <select id="Q8">
+                        <option value="" selected class="default-opt">Select an Option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="lbl-ques">Question 9</h2>
+                    <p class="question">You think that everyone's views should be respected regardless of whether they are supported by facts or not.</p>
+                    <br>
+                    <select id="Q9">
+                        <option value="" selected class="default-opt">Select an Option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <h2 class="lbl-ques">Question 10</h2>
+                    <p class="question">You feel more energetic after spending time with a group of people.</p>
+                    <br>
+                    <select id="Q10">
+                        <option value="" selected class="default-opt">Select an Option</option>
+                        <option value="1">1 (Strongly Disagree)</option>
+                        <option value="2">2</option>
+                        <option value="3">3</option>
+                        <option value="4">4</option>
+                        <option value="5">5 (Strongly Agree)</option>
+                    </select>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-md-12">
+                    <button type="button" id="btn-submit" class="btn btn-danger">Submit</button>
+                    <hr>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-3"></div>
+    </div>
 </body>
+
 </html>
