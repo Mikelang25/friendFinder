@@ -33,6 +33,38 @@ var friends = [
             4
         ]
     },
+    {
+        name: "Amy Schumer",
+        image: "/images/schumer.jpg",
+        scores: [
+            3,
+            4,
+            2,
+            4,
+            2,
+            1,
+            4,
+            5,
+            2,
+            1
+        ]
+    },
+    {
+        name: "Nikki Glaser",
+        image: "/images/glaser.jpg",
+        scores: [
+            5,
+            3,
+            4,
+            2,
+            4,
+            2,
+            1,
+            2,
+            2,
+            5
+        ]
+    }
 ];
 
 module.exports = friends;
